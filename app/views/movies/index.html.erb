@@ -12,7 +12,6 @@
 
 <hr>
 
-<% @movies.each do |movie| %>
-  <%= render partial: "movies/movie_card", locals: { movie: movie } %>
-<% end %>
+<div class="row">
+  <%= render @movies %>
 </div>
