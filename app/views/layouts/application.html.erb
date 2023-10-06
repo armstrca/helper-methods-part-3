@@ -48,13 +48,18 @@
   </div>
 </nav>
 
-<div style="color: green;">
-  <%= notice %>
-</div>
+    <div class="container mt-4">
+      <% if notice.present? %>
+        <div class="alert alert-success" role="alert">
+          <%= notice %>
+        </div>
+      <% end %>
 
-<div style="color: red;">
-  <%= alert %>
-</div>
+      <% if alert.present? %>
+        <div class="alert alert-danger" role="alert">
+          <%= alert %>
+        </div>
+      <% end %>
 
 <%= yield %>
 </body>
