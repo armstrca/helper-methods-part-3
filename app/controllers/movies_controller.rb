@@ -36,9 +36,9 @@ class MoviesController < ApplicationController
   end
 
   def update
-    @movie = Movie.find(params.fetch(:id))
+    # @movie = Movie.find(params.fetch(:id))
 
-    @movie = Movie.update(movie_params)
+    # @movie = Movie.update(movie_params)
     
     if @movie.update(movie_params)
       redirect_to @movie, notice: "Movie updated successfully."
